@@ -284,7 +284,7 @@ const xml2js = require('xml2js');
 
 async function getBookInfo(bookId) {
   const apiKey = process.env.GOODREADS_KEY; // store your key in env for safety
-  const url = `https://www.goodreads.com/book/show.xml?key=${apiKey}&id=${bookId}`;
+  const url = `https://www.goodreads.com/book/show.xml?key=${apiKey}&id=211179569`;
 
   const response = await axios.get(url);
   const xml = response.data;
@@ -310,4 +310,5 @@ getBookInfo('656')  // replace with real Goodreads book ID
   .catch(err => console.error(err));
     </script>
 </body>
+
 </html>
